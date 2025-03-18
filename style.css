@@ -1,0 +1,285 @@
+:root {
+    --color-primary: #99aef1;
+    --color-secondary: #ebebff;
+    --color-tertiary: #dfdfff;
+    --color-button: #a0f0f4cc;
+    --color-button-hover: #748fe8;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; /* Agregamos espacio interno para pantallas pequeñas */
+    overflow: hidden; /* Elimina el scroll de toda la página */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado entre secciones */
+    height: 100%; /* Ocupa el 100% de la pantalla */
+    overflow: hidden; /* Oculta cualquier contenido que se salga */
+    overflow-y: auto;
+    width: 100%;
+    max-width: 1200px; /* Define un ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra la página */
+}
+
+
+/* Banner */
+.header-banner {
+    display: flex; /* Asegúrate de que ambos estén alineados */
+    flex-direction: column; /* Coloca el título y la imagen uno debajo del otro */
+    align-items: center; /* Centra ambos elementos horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    gap: 5px; /* Reduce la separación entre el título y la imagen */
+    margin-bottom: 20px; /* Espaciado inferior para el resto del contenido */
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px; /* Ajuste del padding */
+    width: 100%;
+}
+/* Títulos */
+.main-title {
+    font-size: clamp(6rem, 9vw, 14rem); /* Escalado dinámico: mínimo 2rem, máximo 6rem */
+    font-family: "Ballet", regular;
+    font-weight: 400;
+    font-style: regular;
+    color: #1a0090;
+    margin: 0;
+    text-align: center; /* Asegura que el título esté centrado */
+}
+
+.section-title {
+    font-family: "Playfair Display", regular;
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño relativo */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex; /* Coloca el input y el botón en la misma línea */
+    align-items: center; /* Alinea ambos elementos verticalmente */
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 600px; /* Límite para pantallas grandes */
+    margin: 0 auto; 
+}
+
+.input-name {
+    flex: 1; /* Ocupa todo el espacio restante en el contenedor */
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px; 
+    font-size: 16px;
+    box-sizing: border-box; /* Incluye bordes y paddings en el tamaño total */
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-family: Cormorant Garamond, serif;
+    font-size: 20px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Merriweather", serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px;
+    font-family: Cormorant Garamond, serif;
+    font-size: 20px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 25px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+.button-add {
+    width: auto; /* Se ajusta al contenido */
+    padding: 10px 20px; /* Espaciado interno */
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0; /* Bordes redondeados solo a la derecha */
+    border: 2px solid #000;
+    font-family: Cormorant Garamond, serif;
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+}
+
+.button-draw {
+    font-size: 1.8rem; /* Escalado dinámico */
+    padding: 12px 5%; /* Ajustamos el espacio interno */
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Listas */
+ul {
+    list-style: none; /* Elimina los puntos */
+    padding-left: 0; 
+    max-height: 200px; /* Limita la altura */
+    overflow-y: auto; /* Activa scroll interno */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%; /* Ajusta al contenedor */
+    max-width: 600px; /* Tamaño máximo */
+    margin: 20px auto;
+}
+ul li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+    background-color: #e0fbff; 
+    border: 1px solid #8389ff; 
+    border-radius: 5px; 
+    padding: 10px; 
+    display: flex;
+    align-items: center; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #ff00bf;
+    font-family: "Ballet", cursive;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    padding: 6px 18px;
+    color: #000000;
+    background-color: var(--color-button);
+    font-family: "Bodoni Moda", serif;
+    font-size: 32px;
+    line-height: 1; 
+}
+
+.button-draw img {
+    margin-right: 20px;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+}
+@media (max-width: 768px) {
+    .input-wrapper {
+        flex-direction: column; /* Coloca los elementos en una columna */
+        align-items: stretch; /* Asegura que ambos ocupen el ancho completo */
+        gap: 10px; /* Espacio entre los elementos */
+    }
+
+    .input-name,
+    .button-add {
+        width: 100%; /* Ambos elementos ocupan todo el ancho disponible */
+        border-radius: 25px; /* Bordes completamente redondeados */
+    }
+}
+
+/* El fondo del modal (oscurece el resto de la página) */
+    .modal {
+        display: flex; /* Centra el modal con Flexbox */
+        justify-content: center; /* Alinea horizontalmente */
+        align-items: center; /* Alinea verticalmente */
+        position: fixed; /* Fija la posición respecto a la ventana */
+        top: 0;
+        left: 0;
+        width: 100%; /* Cubre toda la pantalla */
+        height: 100%; /* Cubre toda la pantalla */
+        background-color: rgba(151, 193, 255, 0.062); /* Fondo semitransparente */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    }
+    
+/* El contenido del modal */
+.modal-content {
+    width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+    max-width: 500px; /* Límite máximo para pantallas grandes */
+    padding: 30px; /* Más espacio interno */
+    background-color: #fff; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    font-family: Comorant Garamond, serif;
+    font-size: 19px;
+    text-align: center; /* Centra el texto */
+}
+
+
+/* El botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    }
+.presentacion_imagen {
+    height: auto; /* Mantiene las proporciones de la imagen */
+    max-height: 240px; /* Limita la altura máxima */
+    width: auto; /* Deja que el ancho se ajuste automáticamente */
+    margin: 5 auto; /* Centra la imagen horizontalmente */
+    display: block; /* Asegura que se comporte bien como elemento independiente */
+    }
+    
+.footer {
+    position: fixed; /* Fija el footer en la parte inferior de la ventana */
+    bottom: 0; 
+    left: 0; /* Asegura que comience desde la esquina izquierda */
+    width: 100%; 
+    background-color: var(--color-secondary); /* Fondo consistente con la paleta */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado interno */
+    font-family: "Inter", sans-serif; 
+    font-size: 14px; 
+    color: #000; 
+    z-index: 1; /* Queda detrás del modal pero encima de otros elementos */
+}
